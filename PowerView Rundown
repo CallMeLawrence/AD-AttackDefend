@@ -1,0 +1,38 @@
+## can be gotten from https://github.com/PowerShellMafia/PowerSploit/blob/dev/Recon/PowerView.ps1
+
+## READ THE CHEATSHEET: https://gist.github.com/HarmJ0y/184f9822b195c52dd50c379ed3117993
+
+# open cmd.exe and you have 2 options
+ 1) powershell.exe -ep bypass  
+ 2) Set-ExecutionPolicy -Scope CurrentUser Unrestricted|Bypass
+ 
+
+# Import the powershell module
+
+Import-Module PowerView.ps1
+      -OR-
+. .\PowerView.ps1
+
+
+# get info about the doamin
+Get-NetDomain
+
+# get info about DCs
+Get-NetDomainController
+
+# get polices on doamin
+Get-DomainPolicy
+
+(Get-DomainPolicy)."system access"   ## property within the class object 
+
+# get users on the domain (not recommended)
+Get-NetUser 
+
+Get-NetUser | select cn
+
+Get-NetUser | select samaccountname
+
+Get-NetUser | select description
+
+
+
